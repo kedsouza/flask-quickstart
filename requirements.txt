@@ -8,3 +8,6 @@ MarkupSafe==2.1.2
 Werkzeug==2.2.3
 zipp==3.15.0
 urllib3
+six
+botocore
+s3transfer
