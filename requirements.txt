@@ -11,3 +11,6 @@ urllib3
 six
 botocore
 s3transfer
+python-dateutil
+requests
+tiledb
