@@ -14,3 +14,4 @@ s3transfer
 python-dateutil
 requests
 tiledb
+numpy
