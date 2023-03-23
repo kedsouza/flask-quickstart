@@ -15,3 +15,6 @@ python-dateutil
 requests
 tiledb
 numpy
+tensorflow
+catboost-dev
+frida
