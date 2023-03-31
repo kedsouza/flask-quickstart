@@ -1,4 +1,5 @@
 from flask import Flask
+from xgboost import XGBClassifier
 
 
 app = Flask(__name__)
