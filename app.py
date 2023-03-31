@@ -1,6 +1,5 @@
 from flask import Flask
-import tensorflow as tf
-print("TensorFlow version:", tf.__version__)
+
 
 app = Flask(__name__)
 
