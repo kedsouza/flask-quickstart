@@ -16,12 +16,29 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
+      - name: Set up Python version
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.9'
+
+      - name: Create and start virtual environment
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+      
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+        
+      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v2
         with:
           name: python-app
-          path: .
+          path: |
+            . 
+            !venv/
 
   deploy:
     runs-on: ubuntu-latest
@@ -43,4 +60,4 @@ jobs:
         with:
           app-name: 'kedsouza-python-flask'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_71CE04F44C9A468488A0A3E652E68993 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_947C45AFE2DF4D86ACDE7B8B9F91FD67 }}
