@@ -1,5 +1,5 @@
 from flask import Flask
-from xgboost import XGBClassifier
+import cv2
 
 
 app = Flask(__name__)
